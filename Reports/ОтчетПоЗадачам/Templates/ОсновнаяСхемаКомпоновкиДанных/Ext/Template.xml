@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Наблюдатели.НомерСтроки</dataPath>
+			<field>Наблюдатели.НомерСтроки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>БюджетДо</dataPath>
+			<field>БюджетДо</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Проект</dataPath>
+			<field>Проект</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонтактноеЛицо</dataPath>
+			<field>КонтактноеЛицо</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Автор</dataPath>
+			<field>Автор</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИмяПредопределенныхДанных</dataPath>
+			<field>ИмяПредопределенныхДанных</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Тарификация</dataPath>
+			<field>Тарификация</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Наименование</dataPath>
+			<field>Наименование</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Клиент</dataPath>
+			<field>Клиент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВерсияДанных</dataPath>
+			<field>ВерсияДанных</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПометкаУдаления</dataPath>
+			<field>ПометкаУдаления</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДоговорНачало</dataPath>
+			<field>ДоговорНачало</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Код</dataPath>
+			<field>Код</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Родитель</dataPath>
+			<field>Родитель</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>JIRA</dataPath>
+			<field>JIRA</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Комментарии.Комментарий</dataPath>
+			<field>Комментарии.Комментарий</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>БюджетОзвученКлиенту</dataPath>
+			<field>БюджетОзвученКлиенту</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Комментарии.Ссылка</dataPath>
+			<field>Комментарии.Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИсторияИзменений.Автор</dataPath>
+			<field>ИсторияИзменений.Автор</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>БюджетОт</dataPath>
+			<field>БюджетОт</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаИзменения</dataPath>
+			<field>ДатаИзменения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НачатьНеРанее</dataPath>
+			<field>НачатьНеРанее</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Описание</dataPath>
+			<field>Описание</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Согласовант</dataPath>
+			<field>Согласовант</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ответственный</dataPath>
+			<field>Ответственный</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Отчет</dataPath>
+			<field>Отчет</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Предопределенный</dataPath>
+			<field>Предопределенный</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СвязанныеЗадачи.Задача</dataPath>
+			<field>СвязанныеЗадачи.Задача</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Срок</dataPath>
+			<field>Срок</field>
+		</field>
+		<field xsi:type="DataSetFieldNestedDataSet">
+			<dataPath>СвязанныеЗадачи</dataPath>
+			<field>СвязанныеЗадачи</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Статус</dataPath>
+			<field>Статус</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаСоздания</dataPath>
+			<field>ДатаСоздания</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОбъектМетаданных</dataPath>
+			<field>ОбъектМетаданных</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОжидаемыйРезультат</dataPath>
+			<field>ОжидаемыйРезультат</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПризнакЗадачи</dataPath>
+			<field>ПризнакЗадачи</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИсточникЗадачи</dataPath>
+			<field>ИсточникЗадачи</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Менеджер</dataPath>
+			<field>Менеджер</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерЗадачи</dataPath>
+			<field>НомерЗадачи</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДоговорОкончание</dataPath>
+			<field>ДоговорОкончание</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДоговорБюджет</dataPath>
+			<field>ДоговорБюджет</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтатьяБюджета</dataPath>
+			<field>СтатьяБюджета</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИсторияИзменений.ХарактерИзменений</dataPath>
+			<field>ИсторияИзменений.ХарактерИзменений</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИсторияИзменений.Ссылка</dataPath>
+			<field>ИсторияИзменений.Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИсторияИзменений.НомерСтроки</dataPath>
+			<field>ИсторияИзменений.НомерСтроки</field>
+		</field>
+		<field xsi:type="DataSetFieldNestedDataSet">
+			<dataPath>ИсторияИзменений</dataPath>
+			<field>ИсторияИзменений</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Наблюдатели.Ссылка</dataPath>
+			<field>Наблюдатели.Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Наблюдатели.Наблюдатель</dataPath>
+			<field>Наблюдатели.Наблюдатель</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СвязанныеЗадачи.Ссылка</dataPath>
+			<field>СвязанныеЗадачи.Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldNestedDataSet">
+			<dataPath>Наблюдатели</dataPath>
+			<field>Наблюдатели</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Комментарии.НомерСтроки</dataPath>
+			<field>Комментарии.НомерСтроки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Комментарии.Автор</dataPath>
+			<field>Комментарии.Автор</field>
+		</field>
+		<field xsi:type="DataSetFieldNestedDataSet">
+			<dataPath>Комментарии</dataPath>
+			<field>Комментарии</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СвязанныеЗадачи.НомерСтроки</dataPath>
+			<field>СвязанныеЗадачи.НомерСтроки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Задача</dataPath>
+			<field>Задача</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задача</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	итк_Задача.Ссылка КАК Задача,
+	итк_Задача.ВерсияДанных КАК ВерсияДанных,
+	итк_Задача.ПометкаУдаления КАК ПометкаУдаления,
+	итк_Задача.Родитель КАК Родитель,
+	итк_Задача.Код КАК Код,
+	итк_Задача.Наименование КАК Наименование,
+	итк_Задача.JIRA КАК JIRA,
+	итк_Задача.Автор КАК Автор,
+	итк_Задача.БюджетДо КАК БюджетДо,
+	итк_Задача.БюджетОзвученКлиенту КАК БюджетОзвученКлиенту,
+	итк_Задача.БюджетОт КАК БюджетОт,
+	итк_Задача.ДатаИзменения КАК ДатаИзменения,
+	итк_Задача.Клиент КАК Клиент,
+	итк_Задача.КонтактноеЛицо КАК КонтактноеЛицо,
+	итк_Задача.НачатьНеРанее КАК НачатьНеРанее,
+	итк_Задача.Описание КАК Описание,
+	итк_Задача.Ответственный КАК Ответственный,
+	итк_Задача.Отчет КАК Отчет,
+	итк_Задача.Проект КАК Проект,
+	итк_Задача.Срок КАК Срок,
+	итк_Задача.Статус КАК Статус,
+	итк_Задача.Тарификация КАК Тарификация,
+	итк_Задача.ДатаСоздания КАК ДатаСоздания,
+	итк_Задача.ПризнакЗадачи КАК ПризнакЗадачи,
+	итк_Задача.ИсточникЗадачи КАК ИсточникЗадачи,
+	итк_Задача.Менеджер КАК Менеджер,
+	итк_Задача.ОжидаемыйРезультат КАК ОжидаемыйРезультат,
+	итк_Задача.Согласовант КАК Согласовант,
+	итк_Задача.НомерЗадачи КАК НомерЗадачи,
+	итк_Задача.ДоговорНачало КАК ДоговорНачало,
+	итк_Задача.ДоговорОкончание КАК ДоговорОкончание,
+	итк_Задача.ДоговорБюджет КАК ДоговорБюджет,
+	итк_Задача.ОбъектМетаданных КАК ОбъектМетаданных,
+	итк_Задача.СтатьяБюджета КАК СтатьяБюджета,
+	итк_Задача.ИсторияИзменений.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		Автор КАК Автор,
+		ХарактерИзменений КАК ХарактерИзменений
+	) КАК ИсторияИзменений,
+	итк_Задача.Наблюдатели.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		Наблюдатель КАК Наблюдатель
+	) КАК Наблюдатели,
+	итк_Задача.Комментарии.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		Автор КАК Автор,
+		Комментарий КАК Комментарий
+	) КАК Комментарии,
+	итк_Задача.СвязанныеЗадачи.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		Задача КАК Задача
+	) КАК СвязанныеЗадачи,
+	итк_Задача.Предопределенный КАК Предопределенный,
+	итк_Задача.ИмяПредопределенныхДанных КАК ИмяПредопределенныхДанных
+ИЗ
+	Справочник.итк_Задача КАК итк_Задача</query>
+	</dataSet>
+	<totalField>
+		<dataPath>ДоговорБюджет</dataPath>
+		<expression>Сумма(ДоговорБюджет)</expression>
+	</totalField>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДоговорБюджет</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">Клиент</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>4357cba9-cb2f-44a3-bc7e-a001746492c4</dcsset:userSettingID>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ОбъектМетаданных</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Родитель.НомерЗадачи</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Задача</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

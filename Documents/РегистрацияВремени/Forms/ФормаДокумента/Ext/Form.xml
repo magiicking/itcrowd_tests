@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа5" id="103">
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="104"/>
+			<ChildItems>
+				<UsualGroup name="грКлиент" id="59">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Гр клиент</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Гр клиент</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="грКлиентРасширеннаяПодсказка" id="60"/>
+					<ChildItems>
+						<InputField name="ДокументОснование" id="7">
+							<DataPath>Объект.ДокументОснование</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Задача</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ДокументОснованиеКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ДокументОснованиеРасширеннаяПодсказка" id="9"/>
+							<Events>
+								<Event name="OnChange">ДокументОснованиеПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="Клиент" id="63">
+							<DataPath>Клиент</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="КлиентКонтекстноеМеню" id="64"/>
+							<ExtendedTooltip name="КлиентРасширеннаяПодсказка" id="65"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="РабочееВремя" id="10">
+			<Representation>List</Representation>
+			<Footer>true</Footer>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.РабочееВремя</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="РабочееВремяКонтекстноеМеню" id="11"/>
+			<AutoCommandBar name="РабочееВремяКоманднаяПанель" id="12">
+				<ChildItems>
+					<Button name="РабочееВремяЗаполнитьОтчетПоФакту" id="66">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ЗаполнитьОтчетПоФакту</CommandName>
+						<ExtendedTooltip name="РабочееВремяЗаполнитьОтчетПоФактуРасширеннаяПодсказка" id="67"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="РабочееВремяРасширеннаяПодсказка" id="13"/>
+			<SearchStringAddition name="РабочееВремяСтрокаПоиска" id="14">
+				<AdditionSource>
+					<Item>РабочееВремя</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РабочееВремяСтрокаПоискаКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="РабочееВремяСтрокаПоискаРасширеннаяПодсказка" id="16"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="РабочееВремяСостояниеПросмотра" id="17">
+				<AdditionSource>
+					<Item>РабочееВремя</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РабочееВремяСостояниеПросмотраКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="РабочееВремяСостояниеПросмотраРасширеннаяПодсказка" id="19"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="РабочееВремяУправлениеПоиском" id="20">
+				<AdditionSource>
+					<Item>РабочееВремя</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="РабочееВремяУправлениеПоискомКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="РабочееВремяУправлениеПоискомРасширеннаяПодсказка" id="22"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="РабочееВремяНомерСтроки" id="23">
+					<DataPath>Объект.РабочееВремя.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РабочееВремяНомерСтрокиКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="РабочееВремяНомерСтрокиРасширеннаяПодсказка" id="25"/>
+				</LabelField>
+				<InputField name="РабочееВремяДата" id="26">
+					<DataPath>Объект.РабочееВремя.Дата</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РабочееВремяДатаКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="РабочееВремяДатаРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<InputField name="РабочееВремяПлан" id="29">
+					<DataPath>Объект.РабочееВремя.План</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<FooterDataPath>Объект.РабочееВремя.TotalПлан</FooterDataPath>
+					<ContextMenu name="РабочееВремяПланКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="РабочееВремяПланРасширеннаяПодсказка" id="31"/>
+				</InputField>
+				<InputField name="РабочееВремяФакт" id="32">
+					<DataPath>Объект.РабочееВремя.Факт</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<FooterDataPath>Объект.РабочееВремя.TotalФакт</FooterDataPath>
+					<ContextMenu name="РабочееВремяФактКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="РабочееВремяФактРасширеннаяПодсказка" id="34"/>
+					<Events>
+						<Event name="OnChange">РабочееВремяФактПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="РабочееВремяОтчет" id="35">
+					<DataPath>Объект.РабочееВремя.Отчет</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<FooterDataPath>Объект.РабочееВремя.TotalОтчет</FooterDataPath>
+					<ContextMenu name="РабочееВремяОтчетКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="РабочееВремяОтчетРасширеннаяПодсказка" id="37"/>
+				</InputField>
+				<InputField name="РабочееВремяКомментарий" id="56">
+					<DataPath>Объект.РабочееВремя.Комментарий</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РабочееВремяКомментарийКонтекстноеМеню" id="57"/>
+					<ExtendedTooltip name="РабочееВремяКомментарийРасширеннаяПодсказка" id="58"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<InputField name="Ответственный" id="68">
+			<DataPath>Объект.Ответственный</DataPath>
+			<ContextMenu name="ОтветственныйКонтекстноеМеню" id="69"/>
+			<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="70"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.РегистрацияВремени</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="Клиент" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Клиент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Клиенты</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаполнитьОтчетПоФакту" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить отчет по факту</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить отчет по факту</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьОтчетПоФакту</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>
