@@ -1,0 +1,501 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЗапуститьТаймер" id="55">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ЗапуститьТаймер</CommandName>
+				<ExtendedTooltip name="ФормаЗапуститьТаймерРасширеннаяПодсказка" id="56"/>
+			</Button>
+			<Button name="ФормаОстановитьТаймер" id="57">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОстановитьТаймер</CommandName>
+				<ExtendedTooltip name="ФормаОстановитьТаймерРасширеннаяПодсказка" id="58"/>
+			</Button>
+			<Button name="ФормаОбновитьЗадачу" id="70">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОбновитьЗадачуИзJIRA</CommandName>
+				<ExtendedTooltip name="ФормаОбновитьЗадачуРасширеннаяПодсказка" id="71"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="грИД" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа ИД</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Гр ИД</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="грИДРасширеннаяПодсказка" id="38"/>
+			<ChildItems>
+				<InputField name="JIRA_ID" id="13">
+					<DataPath>Объект.JIRA_ID</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>10</Width>
+					<ContextMenu name="JIRA_IDКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="JIRA_IDРасширеннаяПодсказка" id="15"/>
+					<Events>
+						<Event name="OnChange">JIRA_IDПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Проект" id="28">
+					<DataPath>Объект.Проект</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПроектКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ПроектРасширеннаяПодсказка" id="30"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="грТема" id="47">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа тема</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Гр тема</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="грТемаРасширеннаяПодсказка" id="48"/>
+			<ChildItems>
+				<InputField name="Наименование" id="4">
+					<DataPath>Объект.Description</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тема</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="грКолонки" id="49">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Колонки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Гр колонки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="грКолонкиРасширеннаяПодсказка" id="50"/>
+			<ChildItems>
+				<UsualGroup name="грКолонка1" id="51">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Колонка1</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Гр колонка1</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="грКолонка1РасширеннаяПодсказка" id="52"/>
+					<ChildItems>
+						<InputField name="Ответственный" id="25">
+							<DataPath>Объект.Ответственный</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ОтветственныйКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="27"/>
+						</InputField>
+						<InputField name="Аналитик" id="83">
+							<DataPath>Объект.Аналитик</DataPath>
+							<ContextMenu name="АналитикКонтекстноеМеню" id="84"/>
+							<ExtendedTooltip name="АналитикРасширеннаяПодсказка" id="85"/>
+						</InputField>
+						<InputField name="Разработчик" id="41">
+							<DataPath>Объект.Разработчик</DataPath>
+							<ContextMenu name="РазработчикКонтекстноеМеню" id="42"/>
+							<ExtendedTooltip name="РазработчикРасширеннаяПодсказка" id="43"/>
+						</InputField>
+						<InputField name="Тестировщик" id="86">
+							<DataPath>Объект.Тестировщик</DataPath>
+							<ContextMenu name="ТестировщикКонтекстноеМеню" id="87"/>
+							<ExtendedTooltip name="ТестировщикРасширеннаяПодсказка" id="88"/>
+						</InputField>
+						<InputField name="Куратор" id="80">
+							<DataPath>Объект.Куратор</DataPath>
+							<ContextMenu name="КураторКонтекстноеМеню" id="81"/>
+							<ExtendedTooltip name="КураторРасширеннаяПодсказка" id="82"/>
+						</InputField>
+						<InputField name="Клиент" id="16">
+							<DataPath>Объект.Клиент</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="КлиентКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="КлиентРасширеннаяПодсказка" id="18"/>
+						</InputField>
+						<InputField name="КонтактноеЛицо" id="19">
+							<DataPath>Объект.КонтактноеЛицо</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="КонтактноеЛицоКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="КонтактноеЛицоРасширеннаяПодсказка" id="21"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="грКолонка2" id="53">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Колонка2</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Гр колонка2</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="грКолонка2РасширеннаяПодсказка" id="54"/>
+					<ChildItems>
+						<LabelField name="ТипЗадачи" id="89">
+							<DataPath>Объект.ТипЗадачи</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ТипЗадачиКонтекстноеМеню" id="90"/>
+							<ExtendedTooltip name="ТипЗадачиРасширеннаяПодсказка" id="91"/>
+						</LabelField>
+						<InputField name="ПервоначальнаяОценка" id="59">
+							<DataPath>Объект.ПервоначальнаяОценка</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ПервоначальнаяОценкаКонтекстноеМеню" id="60"/>
+							<ExtendedTooltip name="ПервоначальнаяОценкаРасширеннаяПодсказка" id="61"/>
+						</InputField>
+						<InputField name="Затрачено" id="62">
+							<DataPath>Затрачено</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ЗатраченоКонтекстноеМеню" id="63"/>
+							<ExtendedTooltip name="ЗатраченоРасширеннаяПодсказка" id="64"/>
+						</InputField>
+						<InputField name="Остаток" id="113">
+							<DataPath>Объект.Остаток</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ОстатокКонтекстноеМеню" id="114"/>
+							<ExtendedTooltip name="ОстатокРасширеннаяПодсказка" id="115"/>
+						</InputField>
+						<LabelField name="ДатаСоздания" id="110">
+							<DataPath>Объект.ДатаСоздания</DataPath>
+							<ContextMenu name="ДатаСозданияКонтекстноеМеню" id="111"/>
+							<ExtendedTooltip name="ДатаСозданияРасширеннаяПодсказка" id="112"/>
+						</LabelField>
+						<LabelField name="ДатаЗавершения" id="95">
+							<DataPath>Объект.ДатаЗавершения</DataPath>
+							<ContextMenu name="ДатаЗавершенияКонтекстноеМеню" id="96"/>
+							<ExtendedTooltip name="ДатаЗавершенияРасширеннаяПодсказка" id="97"/>
+						</LabelField>
+						<LabelField name="ДатаАктирования" id="98">
+							<DataPath>Объект.ДатаАктирования</DataPath>
+							<ContextMenu name="ДатаАктированияКонтекстноеМеню" id="99"/>
+							<ExtendedTooltip name="ДатаАктированияРасширеннаяПодсказка" id="100"/>
+						</LabelField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="грКолонка3" id="78">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Колонка3</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Гр колонка1</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="грКолонка3РасширеннаяПодсказка" id="79"/>
+					<ChildItems>
+						<LabelField name="Приоритет" id="101">
+							<DataPath>Объект.Приоритет</DataPath>
+							<ContextMenu name="ПриоритетКонтекстноеМеню" id="102"/>
+							<ExtendedTooltip name="ПриоритетРасширеннаяПодсказка" id="103"/>
+						</LabelField>
+						<InputField name="Статус" id="44">
+							<DataPath>Объект.Статус</DataPath>
+							<ContextMenu name="СтатусКонтекстноеМеню" id="45"/>
+							<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="46"/>
+						</InputField>
+						<InputField name="Релиз" id="72">
+							<DataPath>Объект.Релиз</DataPath>
+							<ContextMenu name="РелизКонтекстноеМеню" id="73"/>
+							<ExtendedTooltip name="РелизРасширеннаяПодсказка" id="74"/>
+						</InputField>
+						<InputField name="Эпик" id="92">
+							<DataPath>Объект.Эпик</DataPath>
+							<ContextMenu name="ЭпикКонтекстноеМеню" id="93"/>
+							<ExtendedTooltip name="ЭпикРасширеннаяПодсказка" id="94"/>
+						</InputField>
+						<InputField name="Родитель" id="7">
+							<DataPath>Объект.Parent</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Основание</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="РодительКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="9"/>
+						</InputField>
+						<LabelField name="Сущность" id="107">
+							<DataPath>Объект.Сущность</DataPath>
+							<ContextMenu name="СущностьКонтекстноеМеню" id="108"/>
+							<ExtendedTooltip name="СущностьРасширеннаяПодсказка" id="109"/>
+						</LabelField>
+						<LabelField name="Процесс" id="104">
+							<DataPath>Объект.Процесс</DataPath>
+							<ContextMenu name="ПроцессКонтекстноеМеню" id="105"/>
+							<ExtendedTooltip name="ПроцессРасширеннаяПодсказка" id="106"/>
+						</LabelField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="грСтраницы" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Гр страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="грСтраницыРасширеннаяПодсказка" id="32"/>
+			<ChildItems>
+				<Page name="стрОписание" id="35">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Описание</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Стр описание</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="стрОписаниеРасширеннаяПодсказка" id="36"/>
+					<ChildItems>
+						<InputField name="Описание" id="22">
+							<DataPath>Объект.Описание</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="ОписаниеКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="ОписаниеРасширеннаяПодсказка" id="24"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="стрДополнительно" id="33">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительно</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Стр дополнительно</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="стрДополнительноРасширеннаяПодсказка" id="34"/>
+					<ChildItems>
+						<UsualGroup name="грКодОснование" id="68">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа код основание</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Гр код основание</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="грКодОснованиеРасширеннаяПодсказка" id="69"/>
+							<ChildItems>
+								<InputField name="Код" id="1">
+									<DataPath>Объект.Code</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+									<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="грКлиент" id="39">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Клиент</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Гр клиент</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="грКлиентРасширеннаяПодсказка" id="40"/>
+						</UsualGroup>
+						<InputField name="Спринт" id="75">
+							<DataPath>Объект.Спринт</DataPath>
+							<ContextMenu name="СпринтКонтекстноеМеню" id="76"/>
+							<ExtendedTooltip name="СпринтРасширеннаяПодсказка" id="77"/>
+						</InputField>
+						<InputField name="JIRA" id="10">
+							<DataPath>Объект.JIRA</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="JIRAКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="JIRAРасширеннаяПодсказка" id="12"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ITC_Задача</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Затрачено" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Затрачено</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DefinedType.итк_Часы</v8:TypeSet>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗапуститьТаймер" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запустить таймер</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запустить таймер</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.T_Play</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗапуститьТаймер</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ОстановитьТаймер" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остановить таймер</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остановить таймер</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.T_Stop</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОстановитьТаймер</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ОбновитьЗадачуИзJIRA" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить задачу из JIRA</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОбновитьЗадачуИзJIRA</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>

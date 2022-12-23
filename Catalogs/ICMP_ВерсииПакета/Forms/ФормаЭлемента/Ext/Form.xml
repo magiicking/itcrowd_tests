@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Владелец" id="7">
+			<DataPath>Объект.Owner</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пакет</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ВладелецКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<UsualGroup name="грФайл" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Гр файл</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Гр файл</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="грФайлРасширеннаяПодсказка" id="36"/>
+			<ChildItems>
+				<InputField name="ИмяФайлаОбработки" id="10">
+					<DataPath>Объект.ИмяФайлаОбработки</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ИмяФайлаОбработкиКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ИмяФайлаОбработкиРасширеннаяПодсказка" id="12"/>
+				</InputField>
+				<Button name="ДобавитьФайл" id="37">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ДобавитьФайл</CommandName>
+					<ExtendedTooltip name="ДобавитьФайлРасширеннаяПодсказка" id="38"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Версия" id="39">
+			<DataPath>Объект.Версия</DataPath>
+			<ContextMenu name="ВерсияКонтекстноеМеню" id="40"/>
+			<ExtendedTooltip name="ВерсияРасширеннаяПодсказка" id="41"/>
+		</InputField>
+		<Table name="ПредназначенныеКонфигурации" id="13">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ПредназначенныеКонфигурации</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ПредназначенныеКонфигурацииКонтекстноеМеню" id="14"/>
+			<AutoCommandBar name="ПредназначенныеКонфигурацииКоманднаяПанель" id="15"/>
+			<ExtendedTooltip name="ПредназначенныеКонфигурацииРасширеннаяПодсказка" id="16"/>
+			<SearchStringAddition name="ПредназначенныеКонфигурацииСтрокаПоиска" id="17">
+				<AdditionSource>
+					<Item>ПредназначенныеКонфигурации</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПредназначенныеКонфигурацииСтрокаПоискаКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="ПредназначенныеКонфигурацииСтрокаПоискаРасширеннаяПодсказка" id="19"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПредназначенныеКонфигурацииСостояниеПросмотра" id="20">
+				<AdditionSource>
+					<Item>ПредназначенныеКонфигурации</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПредназначенныеКонфигурацииСостояниеПросмотраКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="ПредназначенныеКонфигурацииСостояниеПросмотраРасширеннаяПодсказка" id="22"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПредназначенныеКонфигурацииУправлениеПоиском" id="23">
+				<AdditionSource>
+					<Item>ПредназначенныеКонфигурации</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПредназначенныеКонфигурацииУправлениеПоискомКонтекстноеМеню" id="24"/>
+				<ExtendedTooltip name="ПредназначенныеКонфигурацииУправлениеПоискомРасширеннаяПодсказка" id="25"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ПредназначенныеКонфигурацииНомерСтроки" id="26">
+					<DataPath>Объект.ПредназначенныеКонфигурации.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПредназначенныеКонфигурацииНомерСтрокиКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ПредназначенныеКонфигурацииНомерСтрокиРасширеннаяПодсказка" id="28"/>
+				</LabelField>
+				<InputField name="ПредназначенныеКонфигурацииКонфигурация" id="29">
+					<DataPath>Объект.ПредназначенныеКонфигурации.Конфигурация</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПредназначенныеКонфигурацииКонфигурацияКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ПредназначенныеКонфигурацииКонфигурацияРасширеннаяПодсказка" id="31"/>
+				</InputField>
+				<InputField name="ПредназначенныеКонфигурацииВерсияКонфигурации" id="32">
+					<DataPath>Объект.ПредназначенныеКонфигурации.ВерсияКонфигурации</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПредназначенныеКонфигурацииВерсияКонфигурацииКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ПредназначенныеКонфигурацииВерсияКонфигурацииРасширеннаяПодсказка" id="34"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ICMP_ВерсииПакета</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ДобавитьФайл" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить файл</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить файл</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.OpenFile</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДобавитьФайл</Action>
+			<Representation>Picture</Representation>
+		</Command>
+	</Commands>
+</Form>

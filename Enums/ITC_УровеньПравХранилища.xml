@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
+	<Enum uuid="ee68d0a9-e329-4cfd-9905-c5a301be9af9">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.ITC_УровеньПравХранилища" category="Ref">
+				<xr:TypeId>5d699f11-f7e3-4093-bc2b-9cd308ed3597</xr:TypeId>
+				<xr:ValueId>be5e5252-2adf-4026-ac57-d1ebf929fb05</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.ITC_УровеньПравХранилища" category="Manager">
+				<xr:TypeId>2688f955-cf3b-4d56-8472-4853cce9559d</xr:TypeId>
+				<xr:ValueId>e8731d40-17c2-47ac-ad52-f84d66c18e69</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.ITC_УровеньПравХранилища" category="List">
+				<xr:TypeId>96dd5e93-4a36-4fc5-a545-5661c2ec485d</xr:TypeId>
+				<xr:ValueId>93ec3d4b-8306-42cf-b19a-caa513e68304</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ITC_УровеньПравХранилища</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уровень прав хранилища конфигураций</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="08006e39-1e51-4d4c-8d5f-0b412bc660f8">
+				<Properties>
+					<Name>ReadOnly</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Право на просмотр</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="87dc6ac6-f6da-4c15-b173-21ab008288dd">
+				<Properties>
+					<Name>LockObjects</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Право на захват объектов</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="1de97438-e772-4d2e-8e49-c77914914273">
+				<Properties>
+					<Name>ManageConfigurationVersions</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Право на изменение состава версий</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="04d4d9e5-2cd3-4632-9611-9b7877a7bff2">
+				<Properties>
+					<Name>Administration</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Право на административные функции</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>
