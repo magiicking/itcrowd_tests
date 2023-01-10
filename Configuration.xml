@@ -1921,6 +1921,7 @@
 			<DataProcessor>УправлениеИтогамиИАгрегатами</DataProcessor>
 			<DataProcessor>УстановкаОбновлений</DataProcessor>
 			<DataProcessor>VanessaAutomationsingle</DataProcessor>
+			<DataProcessor>Обработка1</DataProcessor>
 			<InformationRegister>ICMP_УдалённыеСессии</InformationRegister>
 			<InformationRegister>ITC_АктивностьПользователя</InformationRegister>
 			<InformationRegister>ITC_ДатаОбмена</InformationRegister>
