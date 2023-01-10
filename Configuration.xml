@@ -1156,6 +1156,7 @@
 			<CommonModule>ШаблоныСообщенийСлужебный</CommonModule>
 			<CommonModule>ШаблоныСообщенийСлужебныйПовтИсп</CommonModule>
 			<CommonModule>ЭлектроннаяПодписьКлиентСерверЛокализация</CommonModule>
+			<CommonModule>ОбщийМодуль1</CommonModule>
 			<CommonModule>ВА_ВанессаКлиент</CommonModule>
 			<CommonModule>ВА_ВанессаСервер</CommonModule>
 			<CommonModule>ВА_ВанессаКлиент_Глобальный</CommonModule>
