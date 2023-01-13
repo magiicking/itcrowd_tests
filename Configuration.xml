@@ -1739,6 +1739,7 @@
 			<Document>РегистрацияВремени</Document>
 			<Document>Спринт</Document>
 			<Document>ФинансоваяОперация</Document>
+			<Document>Документ1</Document>
 			<Enum>ICMP_ТипПакета</Enum>
 			<Enum>ITC_РезультатВыполненияЗадачи</Enum>
 			<Enum>ITC_СостоянияЗадач</Enum>
