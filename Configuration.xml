@@ -1156,6 +1156,7 @@
 			<CommonModule>ШаблоныСообщенийСлужебный</CommonModule>
 			<CommonModule>ШаблоныСообщенийСлужебныйПовтИсп</CommonModule>
 			<CommonModule>ЭлектроннаяПодписьКлиентСерверЛокализация</CommonModule>
+			<CommonModule>ОбщийМодуль1</CommonModule>
 			<CommonModule>ВА_ВанессаКлиент</CommonModule>
 			<CommonModule>ВА_ВанессаСервер</CommonModule>
 			<CommonModule>ВА_ВанессаКлиент_Глобальный</CommonModule>
@@ -1739,6 +1740,7 @@
 			<Document>РегистрацияВремени</Document>
 			<Document>Спринт</Document>
 			<Document>ФинансоваяОперация</Document>
+			<Document>Документ1</Document>
 			<Enum>ICMP_ТипПакета</Enum>
 			<Enum>ITC_РезультатВыполненияЗадачи</Enum>
 			<Enum>ITC_СостоянияЗадач</Enum>
@@ -1922,7 +1924,7 @@
 			<DataProcessor>УстановкаОбновлений</DataProcessor>
 			<DataProcessor>VanessaAutomationsingle</DataProcessor>
 			<DataProcessor>Обработка1</DataProcessor>
-			<DataProcessor>ОтключениеГалочекУРасширений</DataProcessor>
+      <DataProcessor>ОтключениеГалочекУРасширений</DataProcessor>
 			<InformationRegister>ICMP_УдалённыеСессии</InformationRegister>
 			<InformationRegister>ITC_АктивностьПользователя</InformationRegister>
 			<InformationRegister>ITC_ДатаОбмена</InformationRegister>
