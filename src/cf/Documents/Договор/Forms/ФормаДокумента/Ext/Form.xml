@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаРассчитатьСроки" id="75">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.РассчитатьСроки</CommandName>
+				<ExtendedTooltip name="ФормаРассчитатьСрокиРасширеннаяПодсказка" id="76"/>
+			</Button>
+			<Button name="ФормаРассчитатьСмету" id="77">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.РассчитатьСмету</CommandName>
+				<ExtendedTooltip name="ФормаРассчитатьСметуРасширеннаяПодсказка" id="78"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="65">
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="66"/>
+			<ChildItems>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Дата" id="4">
+					<DataPath>Объект.Date</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="Статус" id="10">
+					<DataPath>Объект.Статус</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="СтатусКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="12"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Проект" id="7">
+			<DataPath>Объект.Проект</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="ПроектКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ПроектРасширеннаяПодсказка" id="9"/>
+			<Events>
+				<Event name="OnChange">ПроектПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="СсылкаВСДО" id="13">
+			<DataPath>Объект.СсылкаВСДО</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="СсылкаВСДОКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="СсылкаВСДОРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<Table name="Состав" id="16">
+			<Representation>List</Representation>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Состав</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="СоставКонтекстноеМеню" id="17"/>
+			<AutoCommandBar name="СоставКоманднаяПанель" id="18">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СоставРасширеннаяПодсказка" id="19"/>
+			<SearchStringAddition name="СоставСтрокаПоиска" id="20">
+				<AdditionSource>
+					<Item>Состав</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СоставСтрокаПоискаКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="СоставСтрокаПоискаРасширеннаяПодсказка" id="22"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СоставСостояниеПросмотра" id="23">
+				<AdditionSource>
+					<Item>Состав</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СоставСостояниеПросмотраКонтекстноеМеню" id="24"/>
+				<ExtendedTooltip name="СоставСостояниеПросмотраРасширеннаяПодсказка" id="25"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СоставУправлениеПоиском" id="26">
+				<AdditionSource>
+					<Item>Состав</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СоставУправлениеПоискомКонтекстноеМеню" id="27"/>
+				<ExtendedTooltip name="СоставУправлениеПоискомРасширеннаяПодсказка" id="28"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="СоставНомерСтроки" id="29">
+					<DataPath>Объект.Состав.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СоставНомерСтрокиКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="СоставНомерСтрокиРасширеннаяПодсказка" id="31"/>
+				</LabelField>
+				<InputField name="СоставРабота" id="32">
+					<DataPath>Объект.Состав.Работа</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>41</Width>
+					<ContextMenu name="СоставРаботаКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="СоставРаботаРасширеннаяПодсказка" id="34"/>
+				</InputField>
+				<ColumnGroup name="СоставГруппа1" id="67">
+					<ExtendedTooltip name="СоставГруппа1РасширеннаяПодсказка" id="68"/>
+					<ChildItems>
+						<InputField name="СоставДатаНачала" id="35">
+							<DataPath>Объект.Состав.ДатаНачала</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СоставДатаНачалаКонтекстноеМеню" id="36"/>
+							<ExtendedTooltip name="СоставДатаНачалаРасширеннаяПодсказка" id="37"/>
+							<Events>
+								<Event name="OnChange">СоставДатаНачалаПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="СоставДатаЗавершения" id="38">
+							<DataPath>Объект.Состав.ДатаЗавершения</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СоставДатаЗавершенияКонтекстноеМеню" id="39"/>
+							<ExtendedTooltip name="СоставДатаЗавершенияРасширеннаяПодсказка" id="40"/>
+							<Events>
+								<Event name="OnChange">СоставДатаЗавершенияПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<InputField name="СоставТипБюджета" id="44">
+					<DataPath>Объект.Состав.ТипБюджета</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СоставТипБюджетаКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="СоставТипБюджетаРасширеннаяПодсказка" id="46"/>
+				</InputField>
+				<ColumnGroup name="СоставГруппа2" id="69">
+					<ExtendedTooltip name="СоставГруппа2РасширеннаяПодсказка" id="70"/>
+					<ChildItems>
+						<InputField name="СоставБюджетМинимальный" id="41">
+							<DataPath>Объект.Состав.БюджетМинимальный</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СоставБюджетМинимальныйКонтекстноеМеню" id="42"/>
+							<ExtendedTooltip name="СоставБюджетМинимальныйРасширеннаяПодсказка" id="43"/>
+						</InputField>
+						<InputField name="СоставБюджетМаксимальный" id="47">
+							<DataPath>Объект.Состав.БюджетМаксимальный</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СоставБюджетМаксимальныйКонтекстноеМеню" id="48"/>
+							<ExtendedTooltip name="СоставБюджетМаксимальныйРасширеннаяПодсказка" id="49"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="СоставГруппа3" id="71">
+					<ExtendedTooltip name="СоставГруппа3РасширеннаяПодсказка" id="72"/>
+					<ChildItems>
+						<InputField name="СоставСтоимостьВСметеМинимум" id="50">
+							<DataPath>Объект.Состав.СтоимостьВСметеМинимум</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СоставСтоимостьВСметеМинимумКонтекстноеМеню" id="51"/>
+							<ExtendedTooltip name="СоставСтоимостьВСметеМинимумРасширеннаяПодсказка" id="52"/>
+						</InputField>
+						<InputField name="СоставСтоимостьВСметеМаксимум" id="53">
+							<DataPath>Объект.Состав.СтоимостьВСметеМаксимум</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СоставСтоимостьВСметеМаксимумКонтекстноеМеню" id="54"/>
+							<ExtendedTooltip name="СоставСтоимостьВСметеМаксимумРасширеннаяПодсказка" id="55"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<InputField name="СоставДлительность" id="56">
+					<DataPath>Объект.Состав.Длительность</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СоставДлительностьКонтекстноеМеню" id="57"/>
+					<ExtendedTooltip name="СоставДлительностьРасширеннаяПодсказка" id="58"/>
+					<Events>
+						<Event name="OnChange">СоставДлительностьПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.Договор</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="ТочкаОтсчета" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Точка отсчета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Ставка" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ставка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаполнитьПоПроекту" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по проекту</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по проекту</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьПоПроекту</Action>
+		</Command>
+		<Command name="РассчитатьСмету" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Смета</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рассчитать смету</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РассчитатьСмету</Action>
+		</Command>
+		<Command name="РассчитатьСроки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сроки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рассчитать сроки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РассчитатьСроки</Action>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Enum uuid="cc57d570-e47c-49d2-a638-3b20123c8031">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.РежимСогласования" category="Ref">
+				<xr:TypeId>e24b89fb-00c8-4577-985a-c6fbb8591408</xr:TypeId>
+				<xr:ValueId>df93f44d-5b9c-440a-ba7b-036c917dcc47</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.РежимСогласования" category="Manager">
+				<xr:TypeId>463fa355-342b-4bb1-bd03-5c7c90317a53</xr:TypeId>
+				<xr:ValueId>83335936-616a-4e84-a7f8-2cba2c866b05</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.РежимСогласования" category="List">
+				<xr:TypeId>ee6c14ae-ede5-4d1e-a02e-7348ddc17795</xr:TypeId>
+				<xr:ValueId>5779fc55-cc32-49f2-954b-80402de7ff53</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>РежимСогласования</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим согласования</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="e268d154-df72-4808-a83d-85ff31bb5965">
+				<Properties>
+					<Name>ПоФактуВыполненияРабот</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>По факту выполнения работ</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="517a7181-2e58-4f82-8ce1-3ea7e3e246eb">
+				<Properties>
+					<Name>ПредварительноеСогласованиеКаждойРаботы</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Предварительное согласование каждой работы</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="fe3ce303-cb5b-481a-b6c5-ce3e8bbd054e">
+				<Properties>
+					<Name>ПредварительноеСогласованиеПоСтатьеБюджета</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Предварительное согласование по статье бюджета</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
+		</UsualGroup>
+		<UsualGroup name="Списки" id="47">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Списки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Списки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<AssociatedTableElementId xsi:type="xs:string">Работы</AssociatedTableElementId>
+			<ExtendedTooltip name="СпискиРасширеннаяПодсказка" id="48"/>
+			<ChildItems>
+				<Table name="Этапы" id="25">
+					<CommandBarLocation>None</CommandBarLocation>
+					<UseAlternationRowColor>true</UseAlternationRowColor>
+					<EnableStartDrag>true</EnableStartDrag>
+					<DataPath>Этапы</DataPath>
+					<RowPictureDataPath>Этапы.DefaultPicture</RowPictureDataPath>
+					<AutoRefresh>false</AutoRefresh>
+					<AutoRefreshPeriod>60</AutoRefreshPeriod>
+					<Period>
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</Period>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<RestoreCurrentRow>false</RestoreCurrentRow>
+					<TopLevelParent xsi:nil="true"/>
+					<ShowRoot>true</ShowRoot>
+					<AllowRootChoice>false</AllowRootChoice>
+					<UpdateOnDataChange>Auto</UpdateOnDataChange>
+					<ContextMenu name="ЭтапыКонтекстноеМеню" id="26"/>
+					<AutoCommandBar name="ЭтапыКоманднаяПанель" id="27">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ЭтапыРасширеннаяПодсказка" id="28"/>
+					<SearchStringAddition name="ЭтапыСтрокаПоиска" id="29">
+						<AdditionSource>
+							<Item>Этапы</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ЭтапыСтрокаПоискаКонтекстноеМеню" id="30"/>
+						<ExtendedTooltip name="ЭтапыСтрокаПоискаРасширеннаяПодсказка" id="31"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ЭтапыСостояниеПросмотра" id="32">
+						<AdditionSource>
+							<Item>Этапы</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ЭтапыСостояниеПросмотраКонтекстноеМеню" id="33"/>
+						<ExtendedTooltip name="ЭтапыСостояниеПросмотраРасширеннаяПодсказка" id="34"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ЭтапыУправлениеПоиском" id="35">
+						<AdditionSource>
+							<Item>Этапы</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ЭтапыУправлениеПоискомКонтекстноеМеню" id="36"/>
+						<ExtendedTooltip name="ЭтапыУправлениеПоискомРасширеннаяПодсказка" id="37"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="OnActivateRow">ЭтапыПриАктивизацииСтроки</Event>
+					</Events>
+					<ChildItems>
+						<LabelField name="ЭтапыСсылка" id="62">
+							<DataPath>Этапы.Ссылка</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Этап</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ЭтапыСсылкаКонтекстноеМеню" id="63"/>
+							<ExtendedTooltip name="ЭтапыСсылкаРасширеннаяПодсказка" id="64"/>
+						</LabelField>
+					</ChildItems>
+				</Table>
+				<UsualGroup name="ГруппаРаботы" id="49">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа работы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа работы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаРаботыРасширеннаяПодсказка" id="50"/>
+					<ChildItems>
+						<Table name="Работы" id="3">
+							<Representation>List</Representation>
+							<CommandBarLocation>None</CommandBarLocation>
+							<DefaultItem>true</DefaultItem>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<InitialTreeView>ExpandTopLevel</InitialTreeView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>Работы</DataPath>
+							<RowPictureDataPath>Работы.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+							<ContextMenu name="РаботыКонтекстноеМеню" id="4"/>
+							<AutoCommandBar name="РаботыКоманднаяПанель" id="5"/>
+							<ExtendedTooltip name="РаботыРасширеннаяПодсказка" id="6"/>
+							<SearchStringAddition name="РаботыСтрокаПоиска" id="7">
+								<AdditionSource>
+									<Item>Работы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РаботыСтрокаПоискаКонтекстноеМеню" id="8"/>
+								<ExtendedTooltip name="РаботыСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="РаботыСостояниеПросмотра" id="10">
+								<AdditionSource>
+									<Item>Работы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РаботыСостояниеПросмотраКонтекстноеМеню" id="11"/>
+								<ExtendedTooltip name="РаботыСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="РаботыУправлениеПоиском" id="13">
+								<AdditionSource>
+									<Item>Работы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="РаботыУправлениеПоискомКонтекстноеМеню" id="14"/>
+								<ExtendedTooltip name="РаботыУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="Наименование" id="16">
+									<DataPath>Работы.Наименование</DataPath>
+									<DefaultItem>true</DefaultItem>
+									<ContextMenu name="НаименованиеКонтекстноеМеню" id="17"/>
+									<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="18"/>
+								</LabelField>
+								<LabelField name="Порядок" id="19">
+									<DataPath>Работы.Порядок</DataPath>
+									<ContextMenu name="ПорядокКонтекстноеМеню" id="20"/>
+									<ExtendedTooltip name="ПорядокРасширеннаяПодсказка" id="21"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+						<InputField name="Описание" id="51">
+							<DataPath>Items.Работы.CurrentData.Описание</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="ОписаниеКонтекстноеМеню" id="52"/>
+							<ExtendedTooltip name="ОписаниеРасширеннаяПодсказка" id="53"/>
+						</InputField>
+						<UsualGroup name="Объемы" id="60">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Объемы</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Объемы</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ОбъемыРасширеннаяПодсказка" id="61"/>
+							<ChildItems>
+								<InputField name="ОжидаемаяДлительность" id="54">
+									<DataPath>Items.Работы.CurrentData.ОжидаемаяДлительность</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Длит. (д)</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ОжидаемаяДлительностьКонтекстноеМеню" id="55"/>
+									<ExtendedTooltip name="ОжидаемаяДлительностьРасширеннаяПодсказка" id="56"/>
+								</InputField>
+								<InputField name="ОбъемРаботы" id="57">
+									<DataPath>Items.Работы.CurrentData.ОбъемРаботы</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Объем (ч)</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ОбъемРаботыКонтекстноеМеню" id="58"/>
+									<ExtendedTooltip name="ОбъемРаботыРасширеннаяПодсказка" id="59"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Работы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Работы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникРаботы.Ссылка КАК Ссылка,
+	СправочникРаботы.ПометкаУдаления КАК ПометкаУдаления,
+	СправочникРаботы.Владелец КАК Этап,
+	СправочникРаботы.Владелец.Владелец КАК Проект,
+	СправочникРаботы.Код КАК Код,
+	СправочникРаботы.Наименование КАК Наименование,
+	СправочникРаботы.ОбъемРаботы КАК ОбъемРаботы,
+	СправочникРаботы.Порядок КАК Порядок,
+	СправочникРаботы.ОжидаемаяДлительность КАК ОжидаемаяДлительность,
+	СправочникРаботы.Описание КАК Описание,
+	СправочникРаботы.ТребуемыеРесурсы.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		Квалификация КАК Квалификация,
+		ОжидаемыйОбъем КАК ОжидаемыйОбъем
+	) КАК ТребуемыеРесурсы,
+	СправочникРаботы.ТребуемыеЗадачи.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		Работа КАК Работа,
+		Задержка КАК Задержка
+	) КАК ТребуемыеЗадачи,
+	СправочникРаботы.РезультатыРаботы.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		Результат КАК Результат,
+		Отчетный КАК Отчетный
+	) КАК РезультатыРаботы,
+	СправочникРаботы.Предопределенный КАК Предопределенный,
+	СправочникРаботы.ИмяПредопределенныхДанных КАК ИмяПредопределенныхДанных
+ИЗ
+	Справочник.Работы КАК СправочникРаботы
+ГДЕ
+ Не СправочникРаботы.ПометкаУдаления</QueryText>
+				<MainTable>Catalog.Работы</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Порядок</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="Проект" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проект</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ITC_Проекты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Этапы" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Этапы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникЭтапыПроекта.Ссылка КАК Ссылка,
+	СправочникЭтапыПроекта.ПометкаУдаления КАК ПометкаУдаления,
+	СправочникЭтапыПроекта.Владелец КАК Проект,
+	СправочникЭтапыПроекта.Код КАК Код,
+	СправочникЭтапыПроекта.Наименование КАК Наименование,
+	СправочникЭтапыПроекта.Предопределенный КАК Предопределенный,
+	СправочникЭтапыПроекта.ИмяПредопределенныхДанных КАК ИмяПредопределенныхДанных
+ИЗ
+	Справочник.ЭтапыПроекта КАК СправочникЭтапыПроекта
+ГДЕ
+	(НЕ СправочникЭтапыПроекта.ПометкаУдаления)</QueryText>
+				<MainTable>Catalog.ЭтапыПроекта</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Проект</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+					</dcsset:item>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="Этап" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Этап</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ЭтапыПроекта</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

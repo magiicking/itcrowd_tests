@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CatalogPredefinedItems" version="2.13">
+	<Item id="8c67a367-439a-4336-a330-eb65701bd07d">
+		<Name>ВРаботе</Name>
+		<Code>000000002</Code>
+		<Description>В работе</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="b0153184-975a-4e63-b960-e5c09c130038">
+		<Name>Закрыта</Name>
+		<Code>000000003</Code>
+		<Description>Закрыта</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="75fdaf72-dacf-4adb-9b9d-8c7696c13598">
+		<Name>Новая</Name>
+		<Code>000000001</Code>
+		<Description>Новая</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="07264720-a981-4c4b-93b6-ee8d581c20a5">
+		<Name>Отменена</Name>
+		<Code>000000004</Code>
+		<Description>Отменена</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+</PredefinedData>

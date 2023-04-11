@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CatalogPredefinedItems" version="2.13">
+	<Item id="dc407b80-fdc8-40e2-9c5a-6c601f653979">
+		<Name>Сто</Name>
+		<Code>000000001</Code>
+		<Description>100%</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+</PredefinedData>

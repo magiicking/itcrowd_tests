@@ -1,0 +1,571 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Шапка" id="71">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ШапкаРасширеннаяПодсказка" id="72"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаШапкаПравая" id="75">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка правая</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка правая</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШапкаПраваяРасширеннаяПодсказка" id="76"/>
+					<ChildItems>
+						<UsualGroup name="ПериодЗаполнения" id="77">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Период заполнения</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Период заполнения</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ПериодЗаполненияРасширеннаяПодсказка" id="78"/>
+							<ChildItems>
+								<InputField name="НачалоПериода" id="10">
+									<DataPath>Объект.НачалоПериода</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>За период с</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НачалоПериодаКонтекстноеМеню" id="11"/>
+									<ExtendedTooltip name="НачалоПериодаРасширеннаяПодсказка" id="12"/>
+								</InputField>
+								<InputField name="КонецПериода" id="13">
+									<DataPath>Объект.КонецПериода</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>по</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КонецПериодаКонтекстноеМеню" id="14"/>
+									<ExtendedTooltip name="КонецПериодаРасширеннаяПодсказка" id="15"/>
+									<Events>
+										<Event name="OnChange">КонецПериодаПриИзменении</Event>
+										<Event name="ChoiceProcessing">КонецПериодаОбработкаВыбора</Event>
+									</Events>
+								</InputField>
+								<Button name="УстановитьИнтервал" id="79">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.УстановитьИнтервал</CommandName>
+									<ExtendedTooltip name="УстановитьИнтервалРасширеннаяПодсказка" id="80"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="Сотрудник" id="7">
+							<DataPath>Объект.Сотрудник</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СотрудникКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="СотрудникРасширеннаяПодсказка" id="9"/>
+							<Events>
+								<Event name="OnChange">СотрудникПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ДатаНомер" id="73">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата номер</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата номер</v8:content>
+						</v8:item>
+					</ToolTip>
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<Behavior>Usual</Behavior>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ДатаНомерРасширеннаяПодсказка" id="74"/>
+					<ChildItems>
+						<InputField name="Дата" id="4">
+							<DataPath>Объект.Date</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>10</Width>
+							<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+						</InputField>
+						<InputField name="Номер" id="1">
+							<DataPath>Объект.Number</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа1" id="166">
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="167"/>
+			<ChildItems>
+				<InputField name="ПланНаМесяц" id="16">
+					<DataPath>Объект.ПланНаМесяц</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПланНаМесяцКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ПланНаМесяцРасширеннаяПодсказка" id="18"/>
+				</InputField>
+				<InputField name="ЦельНаМесяц" id="19">
+					<DataPath>Объект.ЦельНаМесяц</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЦельНаМесяцКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ЦельНаМесяцРасширеннаяПодсказка" id="21"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ПланПоКлиентам" id="34">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ПланПоКлиентам</DataPath>
+			<CommandSet>
+				<ExcludedCommand>CancelSearch</ExcludedCommand>
+				<ExcludedCommand>Find</ExcludedCommand>
+				<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+				<ExcludedCommand>SearchEverywhere</ExcludedCommand>
+			</CommandSet>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ПланПоКлиентамКонтекстноеМеню" id="35"/>
+			<AutoCommandBar name="ПланПоКлиентамКоманднаяПанель" id="36">
+				<ChildItems>
+					<Button name="ПланПоКлиентамОтменитьЗадачу" id="161">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОтменитьЗадачу</CommandName>
+						<ExtendedTooltip name="ПланПоКлиентамОтменитьЗадачуРасширеннаяПодсказка" id="162"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ПланПоКлиентамРасширеннаяПодсказка" id="37"/>
+			<SearchStringAddition name="ПланПоКлиентамСтрокаПоиска" id="38">
+				<AdditionSource>
+					<Item>ПланПоКлиентам</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПланПоКлиентамСтрокаПоискаКонтекстноеМеню" id="39"/>
+				<ExtendedTooltip name="ПланПоКлиентамСтрокаПоискаРасширеннаяПодсказка" id="40"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПланПоКлиентамСостояниеПросмотра" id="41">
+				<AdditionSource>
+					<Item>ПланПоКлиентам</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПланПоКлиентамСостояниеПросмотраКонтекстноеМеню" id="42"/>
+				<ExtendedTooltip name="ПланПоКлиентамСостояниеПросмотраРасширеннаяПодсказка" id="43"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПланПоКлиентамУправлениеПоиском" id="44">
+				<AdditionSource>
+					<Item>ПланПоКлиентам</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПланПоКлиентамУправлениеПоискомКонтекстноеМеню" id="45"/>
+				<ExtendedTooltip name="ПланПоКлиентамУправлениеПоискомРасширеннаяПодсказка" id="46"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnEditEnd">ПланПоКлиентамПриОкончанииРедактирования</Event>
+				<Event name="OnActivateRow">ПланПоКлиентамПриАктивизацииСтроки</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="ПланПоКлиентамНомерСтроки" id="47">
+					<DataPath>Объект.ПланПоКлиентам.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПланПоКлиентамНомерСтрокиКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="ПланПоКлиентамНомерСтрокиРасширеннаяПодсказка" id="49"/>
+				</LabelField>
+				<InputField name="ПланПоКлиентамКлиент" id="50">
+					<DataPath>Объект.ПланПоКлиентам.Клиент</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПланПоКлиентамКлиентКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="ПланПоКлиентамКлиентРасширеннаяПодсказка" id="52"/>
+					<Events>
+						<Event name="OnChange">ПланПоКлиентамКлиентПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ПланПоКлиентамСтавкаЧаса" id="168">
+					<DataPath>Объект.ПланПоКлиентам.СтавкаЧаса</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПланПоКлиентамСтавкаЧасаКонтекстноеМеню" id="169"/>
+					<ExtendedTooltip name="ПланПоКлиентамСтавкаЧасаРасширеннаяПодсказка" id="170"/>
+				</InputField>
+				<InputField name="ПланПоКлиентамСтавкаЧасаБезНДС" id="171">
+					<DataPath>Объект.ПланПоКлиентам.СтавкаЧасаБезНДС</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПланПоКлиентамСтавкаЧасаБезНДСКонтекстноеМеню" id="172"/>
+					<ExtendedTooltip name="ПланПоКлиентамСтавкаЧасаБезНДСРасширеннаяПодсказка" id="173"/>
+				</InputField>
+				<InputField name="ПланПоКлиентамКлиентМенеджер" id="89">
+					<DataPath>1/0:be24840c-0d8a-44c3-aeee-e86ffac11a4a/0:b03793ed-e185-4330-a8fd-eb22e4b93628</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПланПоКлиентамКлиентМенеджерКонтекстноеМеню" id="90"/>
+					<ExtendedTooltip name="ПланПоКлиентамКлиентМенеджерРасширеннаяПодсказка" id="91"/>
+				</InputField>
+				<InputField name="ПланПоКлиентамЭЧ" id="92">
+					<DataPath>Объект.ПланПоКлиентам.ЭЧ</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПланПоКлиентамЭЧКонтекстноеМеню" id="93"/>
+					<ExtendedTooltip name="ПланПоКлиентамЭЧРасширеннаяПодсказка" id="94"/>
+				</InputField>
+				<InputField name="ПланПоКлиентамЗадача" id="56">
+					<DataPath>Объект.ПланПоКлиентам.Задача</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПланПоКлиентамЗадачаКонтекстноеМеню" id="57"/>
+					<ExtendedTooltip name="ПланПоКлиентамЗадачаРасширеннаяПодсказка" id="58"/>
+					<Events>
+						<Event name="StartChoice">ПланПоКлиентамЗадачаНачалоВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="ПланПоКлиентамВероятность" id="59">
+					<DataPath>Объект.ПланПоКлиентам.Вероятность</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПланПоКлиентамВероятностьКонтекстноеМеню" id="60"/>
+					<ExtendedTooltip name="ПланПоКлиентамВероятностьРасширеннаяПодсказка" id="61"/>
+				</InputField>
+				<InputField name="ПланПоКлиентамЧтоНужноДляЗакрытия" id="62">
+					<DataPath>Объект.ПланПоКлиентам.ЧтоНужноДляЗакрытия</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПланПоКлиентамЧтоНужноДляЗакрытияКонтекстноеМеню" id="63"/>
+					<ExtendedTooltip name="ПланПоКлиентамЧтоНужноДляЗакрытияРасширеннаяПодсказка" id="64"/>
+				</InputField>
+				<InputField name="ПланПоКлиентамПланДатаНачала" id="65">
+					<DataPath>Объект.ПланПоКлиентам.ПланДатаНачала</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПланПоКлиентамПланДатаНачалаКонтекстноеМеню" id="66"/>
+					<ExtendedTooltip name="ПланПоКлиентамПланДатаНачалаРасширеннаяПодсказка" id="67"/>
+				</InputField>
+				<InputField name="ПланПоКлиентамПланДатаОкончания" id="68">
+					<DataPath>Объект.ПланПоКлиентам.ПланДатаОкончания</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПланПоКлиентамПланДатаОкончанияКонтекстноеМеню" id="69"/>
+					<ExtendedTooltip name="ПланПоКлиентамПланДатаОкончанияРасширеннаяПодсказка" id="70"/>
+				</InputField>
+				<CheckBoxField name="ПланПоКлиентамОтменен" id="155">
+					<DataPath>Объект.ПланПоКлиентам.Отменена</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПланПоКлиентамОтмененКонтекстноеМеню" id="156"/>
+					<ExtendedTooltip name="ПланПоКлиентамОтмененРасширеннаяПодсказка" id="157"/>
+				</CheckBoxField>
+				<InputField name="ПланПоКлиентамПричинаОтмены" id="158">
+					<DataPath>Объект.ПланПоКлиентам.ПричинаОтмены</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПланПоКлиентамПричинаОтменыКонтекстноеМеню" id="159"/>
+					<ExtendedTooltip name="ПланПоКлиентамПричинаОтменыРасширеннаяПодсказка" id="160"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<InputField name="ПричинаОтменыФорма" id="163">
+			<DataPath>Items.ПланПоКлиентам.CurrentData.ПричинаОтмены</DataPath>
+			<Visible>false</Visible>
+			<ReadOnly>true</ReadOnly>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="ПричинаОтменыФормаКонтекстноеМеню" id="164"/>
+			<ExtendedTooltip name="ПричинаОтменыФормаРасширеннаяПодсказка" id="165"/>
+		</InputField>
+		<UsualGroup name="ГруппаИтогоРасчеты" id="95">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа итого расчеты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа итого расчеты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+			<Group>AlwaysHorizontal</Group>
+			<HorizontalAlign>Right</HorizontalAlign>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>false</ShowTitle>
+			<BackColor>#EDEDED</BackColor>
+			<ExtendedTooltip name="ГруппаИтогоРасчетыРасширеннаяПодсказка" id="96"/>
+			<ChildItems>
+				<InputField name="ИтогоЭЧ100" id="97">
+					<DataPath>ИтогоЭЧ100</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Итого ЭЧ  со 100%</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Right</HorizontalAlign>
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<ContextMenu name="ИтогоЭЧ100КонтекстноеМеню" id="98"/>
+					<ExtendedTooltip name="ИтогоЭЧ100РасширеннаяПодсказка" id="99"/>
+				</InputField>
+				<InputField name="ИтогоЭЧНе100" id="100">
+					<DataPath>ИтогоЭЧНе100</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Итого ЭЧ (не точно)</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Right</HorizontalAlign>
+					<ContextMenu name="ИтогоЭЧНе100КонтекстноеМеню" id="101"/>
+					<ExtendedTooltip name="ИтогоЭЧНе100РасширеннаяПодсказка" id="102"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ПланМенеджера</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="ИтогоЭЧ100" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Итого э ч100</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>12</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИтогоЭЧНе100" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Итого ЭЧНе100</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>12</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ПланСертификацииСКПлан</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ПланСертификацииСКФакт</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ПланСертификацииСпецФакт</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ПланСертификации.Проф</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ПланСертификацииПрофПлан</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ПланСертификации.ПрофФакт</dcsset:left>
+						<dcsset:comparisonType>Greater</dcsset:comparisonType>
+						<dcsset:right xsi:type="v8:StandardBeginningDate">
+							<v8:variant xsi:type="v8:StandardBeginningDateVariant">Custom</v8:variant>
+							<v8:date>0001-01-01T00:00:00</v8:date>
+						</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ПланСертификацииСКПлан</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ПланСертификации.СКФакт</dcsset:left>
+						<dcsset:comparisonType>Greater</dcsset:comparisonType>
+						<dcsset:right xsi:type="v8:StandardBeginningDate">
+							<v8:variant xsi:type="v8:StandardBeginningDateVariant">Custom</v8:variant>
+							<v8:date>0001-01-01T00:00:00</v8:date>
+						</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ПланСертификацииСпецПлан</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ПланСертификации.СпецФакт</dcsset:left>
+						<dcsset:comparisonType>Greater</dcsset:comparisonType>
+						<dcsset:right xsi:type="v8:StandardBeginningDate">
+							<v8:variant xsi:type="v8:StandardBeginningDateVariant">Custom</v8:variant>
+							<v8:date>0001-01-01T00:00:00</v8:date>
+						</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ПланПоКлиентам</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ПланПоКлиентам.Отменена</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:NegativeTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="УстановитьИнтервал" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить интервал</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить интервал</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.SetDateInterval</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьИнтервал</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ОтменитьЗадачу" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить задачу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить задачу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтменитьЗадачу</Action>
+		</Command>
+	</Commands>
+</Form>

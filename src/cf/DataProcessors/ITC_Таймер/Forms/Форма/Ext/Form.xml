@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Результаты запуска таймера по задачам</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="грСворачивать" id="94">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свернуть данные таймера</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<CollapsedRepresentationTitle>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать данные таймера</v8:content>
+				</v8:item>
+			</CollapsedRepresentationTitle>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="грСворачиватьРасширеннаяПодсказка" id="95"/>
+			<ChildItems>
+				<Table name="ДанныеТаймера" id="60">
+					<UseAlternationRowColor>true</UseAlternationRowColor>
+					<EnableStartDrag>true</EnableStartDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>ДанныеТаймера</DataPath>
+					<RowPictureDataPath>ДанныеТаймера.DefaultPicture</RowPictureDataPath>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<AutoRefresh>true</AutoRefresh>
+					<AutoRefreshPeriod>60</AutoRefreshPeriod>
+					<Period>
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</Period>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<RestoreCurrentRow>false</RestoreCurrentRow>
+					<TopLevelParent xsi:nil="true"/>
+					<ShowRoot>true</ShowRoot>
+					<AllowRootChoice>false</AllowRootChoice>
+					<UpdateOnDataChange>Auto</UpdateOnDataChange>
+					<ContextMenu name="ДанныеТаймераКонтекстноеМеню" id="61"/>
+					<AutoCommandBar name="ДанныеТаймераКоманднаяПанель" id="62">
+						<Autofill>false</Autofill>
+						<ChildItems>
+							<Button name="ДанныеТаймераТаймер_Запустить" id="85">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.Таймер_Запустить</CommandName>
+								<TextColor>style:Кнопка_ЦветШрифта</TextColor>
+								<BackColor>style:Кнопка_Фон</BackColor>
+								<ExtendedTooltip name="ДанныеТаймераТаймер_ЗапуститьРасширеннаяПодсказка" id="86"/>
+							</Button>
+							<Button name="ДанныеТаймераДокументОбращениеСоздатьОбращениеЗапуститьТаймер" id="89">
+								<Type>CommandBarButton</Type>
+								<CommandName>Document.Задача.Command.СоздатьОбращениеЗапуститьТаймер</CommandName>
+								<TextColor>style:Кнопка_ЦветШрифта</TextColor>
+								<BackColor>style:Кнопка_Фон</BackColor>
+								<ExtendedTooltip name="ДанныеТаймераДокументОбращениеСоздатьОбращениеЗапуститьТаймерРасширеннаяПодсказка" id="90"/>
+							</Button>
+							<Button name="ДанныеТаймераТаймер_Остановить" id="87">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.Таймер_Остановить</CommandName>
+								<TextColor>style:Кнопка_ЦветШрифта</TextColor>
+								<BackColor>style:Кнопка_Фон</BackColor>
+								<ExtendedTooltip name="ДанныеТаймераТаймер_ОстановитьРасширеннаяПодсказка" id="88"/>
+							</Button>
+							<Button name="ОтработанноеВремяОбновитьТаймер" id="56">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ОбновитьТаймер</CommandName>
+								<TextColor>style:Кнопка_ЦветШрифта</TextColor>
+								<BackColor>style:Кнопка_Фон</BackColor>
+								<ExtendedTooltip name="ОтработанноеВремяОбновитьТаймерРасширеннаяПодсказка" id="57"/>
+							</Button>
+							<Button name="ФормаСоздатьНарядИзСписка" id="39">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.СоздатьНарядИзСписка</CommandName>
+								<TextColor>style:Кнопка_ЦветШрифта</TextColor>
+								<BackColor>style:Кнопка_Фон</BackColor>
+								<ExtendedTooltip name="ФормаСоздатьНарядИзСпискаРасширеннаяПодсказка" id="40"/>
+							</Button>
+							<Button name="ОбнулитьТаймер" id="8">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ОбнулитьТаймер</CommandName>
+								<TextColor>style:Кнопка_ЦветШрифта</TextColor>
+								<BackColor>style:Кнопка_Фон</BackColor>
+								<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="ОбнулитьТаймерРасширеннаяПодсказка" id="9"/>
+							</Button>
+							<Button name="ДанныеТаймераНастройкаСписка" id="96">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.ДанныеТаймера.StandardCommand.ListSettings</CommandName>
+								<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="ДанныеТаймераНастройкаСпискаРасширеннаяПодсказка" id="97"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ДанныеТаймераРасширеннаяПодсказка" id="63"/>
+					<SearchStringAddition name="ДанныеТаймераСтрокаПоиска" id="64">
+						<AdditionSource>
+							<Item>ДанныеТаймера</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ДанныеТаймераСтрокаПоискаКонтекстноеМеню" id="65"/>
+						<ExtendedTooltip name="ДанныеТаймераСтрокаПоискаРасширеннаяПодсказка" id="66"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ДанныеТаймераСостояниеПросмотра" id="67">
+						<AdditionSource>
+							<Item>ДанныеТаймера</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ДанныеТаймераСостояниеПросмотраКонтекстноеМеню" id="68"/>
+						<ExtendedTooltip name="ДанныеТаймераСостояниеПросмотраРасширеннаяПодсказка" id="69"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ДанныеТаймераУправлениеПоиском" id="70">
+						<AdditionSource>
+							<Item>ДанныеТаймера</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ДанныеТаймераУправлениеПоискомКонтекстноеМеню" id="71"/>
+						<ExtendedTooltip name="ДанныеТаймераУправлениеПоискомРасширеннаяПодсказка" id="72"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<LabelField name="ДанныеТаймераДатаНачала" id="73">
+							<DataPath>ДанныеТаймера.ДатаНачала</DataPath>
+							<Width>13</Width>
+							<ContextMenu name="ДанныеТаймераДатаНачалаКонтекстноеМеню" id="74"/>
+							<ExtendedTooltip name="ДанныеТаймераДатаНачалаРасширеннаяПодсказка" id="75"/>
+						</LabelField>
+						<LabelField name="ДанныеТаймераДатаОкончания" id="76">
+							<DataPath>ДанныеТаймера.ДатаОкончания</DataPath>
+							<Width>13</Width>
+							<ContextMenu name="ДанныеТаймераДатаОкончанияКонтекстноеМеню" id="77"/>
+							<ExtendedTooltip name="ДанныеТаймераДатаОкончанияРасширеннаяПодсказка" id="78"/>
+						</LabelField>
+						<LabelField name="ДанныеТаймераКомментарий" id="79">
+							<DataPath>ДанныеТаймера.Комментарий</DataPath>
+							<ContextMenu name="ДанныеТаймераКомментарийКонтекстноеМеню" id="80"/>
+							<ExtendedTooltip name="ДанныеТаймераКомментарийРасширеннаяПодсказка" id="81"/>
+						</LabelField>
+						<LabelField name="ДанныеТаймераЗадача" id="91">
+							<DataPath>ДанныеТаймера.Задача</DataPath>
+							<ContextMenu name="ДанныеТаймераЗадачаКонтекстноеМеню" id="92"/>
+							<ExtendedTooltip name="ДанныеТаймераЗадачаРасширеннаяПодсказка" id="93"/>
+						</LabelField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ITC_Таймер</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ДанныеТаймера" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные таймера</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>~ДанныеТаймера.Обращение</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	РегистрСведенийТаймер.Дата КАК ДатаНачала,
+	РегистрСведенийТаймер.ДатаКонец КАК ДатаОкончания,
+	РегистрСведенийТаймер.Комментарий,
+	РегистрСведенийТаймер.Задача КАК Задача
+ИЗ
+	РегистрСведений.Таймер КАК РегистрСведенийТаймер
+ГДЕ
+	РегистрСведенийТаймер.Пользователь = &amp;Пользователь</QueryText>
+				<MainTable>InformationRegister.Таймер</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="JIRA" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ID задачи в JIRA</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОбнулитьТаймер" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обнулить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обнулить таймер</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.T_Remove</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОбнулитьТаймер</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СоздатьНарядИзСписка" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наряд</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать наряд из списка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.check</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СоздатьНарядИзСписка</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОбновитьТаймер" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить таймер</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.loop</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОбновитьТаймер</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Таймер_Запустить" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таймер запустить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таймер запустить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.control_play</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Таймер_Запустить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Таймер_Остановить" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таймер остановить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таймер остановить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.control_stop</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Таймер_Остановить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>
